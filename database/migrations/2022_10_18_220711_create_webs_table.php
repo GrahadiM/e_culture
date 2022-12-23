@@ -21,6 +21,7 @@ class CreateWebsTable extends Migration
             $table->string('email')->unique()->nullable();
             $table->string('copyright')->unique()->nullable();
             $table->string('footer')->unique()->nullable();
+            $table->string('github')->unique()->nullable();
             $table->timestamps();
         });
     }

@@ -3,11 +3,18 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
+// Route::get('/', function () {
+//     // return redirect()->route('login');
+//     return view('fe.index');
+// });
 
-
-Route::get('/', function () {
-    // return redirect()->route('login');
-    return view('layouts.fe.index');
+Route::controller(App\Http\Controllers\FrontendController::class)->prefix('')->name('fe.')->group(function() {
+    Route::get('/', 'index')->name('index');
+    Route::get('/about', 'about')->name('about');
+    Route::get('/gallery', 'gallery')->name('gallery');
+    Route::get('/news', 'news')->name('news');
+    Route::get('/detail_news', 'detail_news')->name('detail_news');
+    Route::get('/contact', 'contact')->name('contact');
 });
 
 Auth::routes([
