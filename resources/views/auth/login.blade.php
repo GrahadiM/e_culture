@@ -30,7 +30,6 @@
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-                                <a href="javascript:void(0)" type="button" id="show_pass" class="hide_pass"><i id="show-password" class="fa fa-eye-slash"></i></a>
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -38,42 +37,6 @@
                                 @enderror
                             </div>
                         </div>
-
-                        <div class="row mb-3">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="show_password" id="checkbox" {{ old('show_password') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="show_password">
-                                        <i id="icon-eye" class="fa fa-eye-slash"></i> {{ trans('auth.show_password') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- jQuery -->
-                        <script src="{{ asset('adm') }}/plugins/jquery/jquery.min.js"></script>
-                        <script type="text/javascript">
-                            // $('#password').hidePassword('focus');
-                        	// $('#password_confirmation').hidePassword('focus');
-                            $("#show_pass").on('click', function() {
-                                // $(this).slideUp();
-                                if ($('#show_pass').attr('class', 'show_pass')) {
-                                    $('#show_pass').attr('class', 'hide_pass');
-                                    $('#show-password').attr('class',$('#show_pass').attr('class', 'hide_pass')?"fa fa-eye":"fa fa-eye-slash");
-                                } else if ($('#show_pass').attr('class', 'hide_pass')) {
-                                    $('#show_pass').attr('class', 'show_pass');
-                                    $('#show-password').attr('class',$('#show_pass').attr('class', 'show_pass')?"fa fa-eye-slash":"fa fa-eye");
-                                }
-
-                            });
-                            $(document).ready(function() {
-                                $('#checkbox').on('change', function(){
-                                    $('#icon-eye').attr('class',$('#checkbox').prop('checked')==true?"fa fa-eye":"fa fa-eye-slash");
-                                    $('#password').attr('type',$('#checkbox').prop('checked')==true?"text":"password");
-                                });
-                            });
-                        </script>
 
                         <div class="row mb-3">
                             <div class="col-md-6 offset-md-4">

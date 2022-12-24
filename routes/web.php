@@ -28,8 +28,8 @@ Route::controller(App\Http\Controllers\FrontendController::class)->prefix('')->n
 Auth::routes([
     'login'    => true,
     'logout'   => true,
-    'register' => true,
-    'reset'    => true,   // for resetting passwords
+    'register' => false,
+    'reset'    => false,   // for resetting passwords
     'confirm'  => false,  // for additional password confirmations
     'verify'   => false,  // for email verification
 ]);
