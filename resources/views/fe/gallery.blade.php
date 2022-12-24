@@ -1,5 +1,5 @@
 @extends('layouts.fe.base')
-@section('title', 'About')
+@section('title', 'Gallery')
 
 @section('content')
 

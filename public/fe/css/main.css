@@ -2143,6 +2143,13 @@ ul.breadcrumb li a:hover {
 }
 
 .section-ticket .body .panel .panel-body form .input-form input,
+.section-ticket .body .panel .panel-body form .input-form textarea,
 .section-ticket .body .panel .panel-body form .input-form select {
   margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.section-ticket .body .panel .panel-body form .input-form .btn-contact {
+    margin-top: 15px;
+    margin-bottom: 15px;
 }

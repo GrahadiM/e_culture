@@ -9,6 +9,7 @@ class DashboardController extends Controller
 {
     public function __construct()
     {
+        $this->middleware('auth');
         $this->middleware('permission:dashboard-C', ['only' => ['index','list','show']]);
         $this->middleware('permission:dashboard-R', ['only' => ['create','store']]);
         $this->middleware('permission:dashboard-U', ['only' => ['edit','update']]);

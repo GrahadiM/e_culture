@@ -13,8 +13,16 @@ Route::controller(App\Http\Controllers\FrontendController::class)->prefix('')->n
     Route::get('/about', 'about')->name('about');
     Route::get('/gallery', 'gallery')->name('gallery');
     Route::get('/news', 'news')->name('news');
-    Route::get('/detail_news', 'detail_news')->name('detail_news');
+    Route::get('/detail_news/{id}', 'detail_news')->name('detail_news');
+    Route::get('/destination', 'destination')->name('destination');
+    Route::get('/detail_destination/{id}', 'detail_destination')->name('detail_destination');
+    Route::get('/culture', 'culture')->name('culture');
+    Route::get('/detail_culture/{id}', 'detail_culture')->name('detail_culture');
+    Route::get('/event', 'event')->name('event');
+    Route::get('/detail_event/{id}', 'detail_event')->name('detail_event');
+    Route::get('/smart_city', 'smart_city')->name('smart_city');
     Route::get('/contact', 'contact')->name('contact');
+    Route::post('/contact', 'contact_post')->name('contact_post');
 });
 
 Auth::routes([

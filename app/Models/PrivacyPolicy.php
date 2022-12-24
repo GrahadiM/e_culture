@@ -11,5 +11,6 @@ class PrivacyPolicy extends Model
 
     protected $table = 'privacy_policy';
     protected $primarykey = 'id';
+    protected $guarded = [];
     // public $timestamps = false;
 }

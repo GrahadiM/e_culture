@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="{{ asset('adm') }}/plugins/fontawesome-free/css/all.min.css">
     <!-- flag-icon-css -->
     <link rel="stylesheet" href="{{ asset('adm') }}/plugins/flag-icon-css/css/flag-icon.min.css">
+    <!-- ion-icon-css -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- overlayScrollbars -->
     {{-- <link rel="stylesheet" href="{{ asset('adm') }}/plugins/overlayScrollbars/css/OverlayScrollbars.min.css"> --}}
     <!-- Theme style -->

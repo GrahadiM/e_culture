@@ -11,5 +11,6 @@ class TermsOfService extends Model
 
     protected $table = 'terms_of_service';
     protected $primarykey = 'id';
+    protected $guarded = [];
     // public $timestamps = false;
 }

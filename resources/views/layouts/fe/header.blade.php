@@ -21,10 +21,14 @@
                             <li><button class="btn-login" id="openLogin">LOGIN</button></li>
                         @endif
                     @else
-                        <li><a class="btn-login" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">LOGOUT</a></li>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
+                        @if (auth()->user()->hasRole('admin'))
+                            <li><button class="btn-login" onclick="location.href='{{ route('home') }}'" type="button">Dashboard</button></li>
+                        @else
+                            <li><button class="btn-login" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">LOGOUT</button></li>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        @endif
                     @endguest
                 </ul>
             </div>
@@ -74,7 +78,7 @@
             <div class="form-input">
                 <button type="submit" class="btn btn-login">Log In</button>
             </div>
-            <a href="" class="text-center">Don't have account ? Register now</a>
+            {{-- <a href="" class="text-center">Don't have account ? Register now</a> --}}
         </form>
     </div>
 

@@ -9,4 +9,4 @@ var tanggal = tgl.getDate();
 var bulan = tgl.getMonth();
 var tahun = tgl.getFullYear();
 tanggallengkap = namahari[hari] + ", " + tanggal + " " + namabulan[bulan] + " " + tahun;
-document.write(tanggallengkap);
+// document.write(tanggallengkap);

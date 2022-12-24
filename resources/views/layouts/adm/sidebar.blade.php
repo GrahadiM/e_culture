@@ -1,7 +1,7 @@
 
         <aside class="main-sidebar main-sidebar-custom sidebar-dark-olive elevation-4">
             <!-- Brand Logo -->
-            <a href="{{ url('/') }}" class="brand-link bg-olive">
+            <a href="{{ route('home') }}" class="brand-link bg-olive">
                 <img src="{{ asset('adm') }}/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-bold">{{ config('app.name', 'Laravel') }}</span>
             </a>
@@ -24,7 +24,7 @@
                         <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
                         @can('role-R')
                         <li class="nav-item">
-                            <a href="{{ url('/') }}" class="nav-link {{ Request::routeIs('dashboard') ? 'active' : '' }}">
+                            <a href="{{ route('home') }}" class="nav-link {{ Request::routeIs('dashboard') ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-home"></i>
                                 <p>
                                     {{ trans('menu.dashboard.title') }}

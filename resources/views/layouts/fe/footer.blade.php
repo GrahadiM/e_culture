@@ -8,22 +8,12 @@
                 <p>Jl. Cendrawasih SP. III Kuala Kencana - Timika - Papua <br>
                     Phone : +62 811 4900 700 <br>
                     Email : info@mimikakab.go.id </p>
-                <a href="https://www.facebook.com/bestbali/" target="_blank"><span
+                <a href="https://www.facebook.com/dinas.mimika" target="_blank"><span
                         class="ion-social-facebook icon-social"></span></a>
-                <a href="https://www.instagram.com/explorebali/" target="_blank"><span
+                <a href="https://www.instagram.com/pemkabmimika/?hl=en" target="_blank"><span
                         class="ion-social-instagram icon-social"></span></a>
-                <a href="https://twitter.com/hashtag/explorebali?lang=en" target="_blank"><span
+                <a href="https://twitter.com/mimikapemkab" target="_blank"><span
                         class="ion-social-twitter icon-social"></span></a>
-            </div>
-            <div class="col-right">
-                <b>EXPERIENCE</b>
-                <ul>
-                    <li><a href="#">Natural</a></li>
-                    <li><a href="#">Culture</a></li>
-                    <li><a href="#">Religi</a></li>
-                    <li><a href="#">Culnary</a></li>
-                    <li><a href="#">Adventure</a></li>
-                </ul>
             </div>
             <div class="col-right">
                 <b>TRAVEL GUIDE</b>
@@ -37,10 +27,33 @@
             <div class="col-right">
                 <b>WHAT'S HAPPEN</b>
                 <ul>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Event</a></li>
-                    <li><a href="#">Tips & Info</a></li>
+                    <li><a href="{{ route('fe.news') }}">News</a></li>
+                    <li><a href="{{ route('fe.event') }}">Event</a></li>
+                    <li><a href="{{ route('fe.culture') }}">Culture</a></li>
+                    <li><a href="{{ route('fe.destination') }}">Destination</a></li>
                 </ul>
+            </div>
+            <div class="col-right">
+                <b>STATISTIK PENGUNJUNG</b>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Hari ini</td>
+                            <td align="center" width="20">:</td>
+                            <td>300</td>
+                        </tr>
+                        <tr>
+                            <td>Bulan ini</td>
+                            <td align="center" width="20">:</td>
+                            <td>3200</td>
+                        </tr>
+                        <tr>
+                            <td>Tahun ini</td>
+                            <td align="center" width="20">:</td>
+                            <td>134300</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
         <div class="footer-bottom">
