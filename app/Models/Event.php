@@ -12,4 +12,9 @@ class Event extends Model
     protected $table = 'events';
     protected $primarykey = 'id';
     protected $guarded = [];
+
+    public function author()
+    {
+        return $this->belongsTo(User::class, 'author_id');
+    }
 }

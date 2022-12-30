@@ -12,4 +12,9 @@ class Culture extends Model
     protected $table = 'culture';
     protected $primarykey = 'id';
     protected $guarded = [];
+
+    public function author()
+    {
+        return $this->belongsTo(User::class, 'author_id');
+    }
 }

@@ -3,10 +3,20 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\SmartCity;
 use Illuminate\Http\Request;
 
 class SmartCityController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('permission:smartcity-C', ['only' => ['index','list','show']]);
+        $this->middleware('permission:smartcity-R', ['only' => ['create','store']]);
+        $this->middleware('permission:smartcity-U', ['only' => ['edit','update']]);
+        $this->middleware('permission:smartcity-D', ['only' => ['destroy']]);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +24,9 @@ class SmartCityController extends Controller
      */
     public function index()
     {
-        //
+        $data['title'] = 'Smart City';
+        $data['item'] = SmartCity::first();
+        return view('adm.smart_city.index', $data);
     }
 
     /**
@@ -69,7 +81,14 @@ class SmartCityController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'body' => 'required',
+        ]);
+
+        $data['body'] = $request->body;
+        SmartCity::find($id)->update($data);
+
+        return back()->with('success','Data Berhasil Tersimpan');
     }
 
     /**

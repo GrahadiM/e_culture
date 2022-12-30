@@ -3,17 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Models\Opd;
-use App\Models\Visi;
 use App\Models\Misi;
 use App\Models\News;
+use App\Models\Visi;
 use App\Models\About;
-use App\Models\Contact;
 use App\Models\Event;
+use App\Models\Contact;
 use App\Models\Culture;
+use App\Models\ViewPage;
 use App\Models\SmartCity;
 use App\Models\Structural;
 use App\Models\Destination;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class FrontendController extends Controller
 {

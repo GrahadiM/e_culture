@@ -75,9 +75,17 @@
                             </ul>
                         </li>
                         @endcan
+                        @can('smartcity-R')
+                        <li class="nav-item">
+                            <a href="{{ route('admin.smartcity.index') }}" class="nav-link {{ Request::routeIs('admin.smartcity*') ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-clipboard-list"></i>
+                                <p>Menu Smart City</p>
+                            </a>
+                        </li>
+                        @endcan
                         @can('about-R')
                         <li class="nav-item">
-                            <a href="{{ route('admin.about.index') }}" class="nav-link {{ Request::routeIs('about') ? 'active' : '' }}">
+                            <a href="{{ route('admin.about.index') }}" class="nav-link {{ Request::routeIs('admin.about*') ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-clipboard-list"></i>
                                 <p>Menu Tentang</p>
                             </a>
@@ -85,7 +93,7 @@
                         @endcan
                         @can('contact-R')
                         <li class="nav-item">
-                            <a href="{{ route('admin.contact.index') }}" class="nav-link {{ Request::routeIs('contact') ? 'active' : '' }}">
+                            <a href="{{ route('admin.contact.index') }}" class="nav-link {{ Request::routeIs('admin.contact*') ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-comments"></i>
                                 <p>Menu Pesan</p>
                             </a>
@@ -101,7 +109,7 @@
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
-                                @can('role-R')
+                                {{-- @can('role-R')
                                 <li class="nav-item">
                                     <a href="{{ route('roles.index') }}" class="nav-link {{ Request::routeIs('roles*') ? 'active' : '' }}">
                                         <i class="fas fa-angle-right nav-icon"></i>
@@ -116,7 +124,7 @@
                                         <p>{{ trans('menu.permission.title') }}</p>
                                     </a>
                                 </li>
-                                @endcan
+                                @endcan --}}
                                 @can('user-R')
                                 <li class="nav-item">
                                     <a href="{{ route('users.index') }}" class="nav-link {{ Request::routeIs('users*') ? 'active' : '' }}">

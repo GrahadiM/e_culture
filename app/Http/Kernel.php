@@ -70,5 +70,6 @@ class Kernel extends HttpKernel
         'role_or_permission' => \Spatie\Permission\Middlewares\RoleOrPermissionMiddleware::class,
         'setlang' => \App\Http\Middleware\SetLangMiddleware::class,
         'xss' => \App\Http\Middleware\XSSProtection::class,
+        'visitor' => \App\Http\Middleware\CountVisitor::class,
     ];
 }

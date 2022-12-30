@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('fe.index');
 // });
 
-Route::controller(App\Http\Controllers\FrontendController::class)->prefix('')->name('fe.')->group(function() {
+Route::middleware(['visitor'])->controller(App\Http\Controllers\FrontendController::class)->prefix('')->name('fe.')->group(function() {
     Route::get('/', 'index')->name('index');
     Route::get('/about', 'about')->name('about');
     Route::get('/gallery', 'gallery')->name('gallery');
@@ -42,9 +42,9 @@ Route::middleware(['auth'])->group(function () {
     Route::prefix('admin')->name('admin.')->group(function() {
         Route::controller(App\Http\Controllers\Admin\AboutController::class)->prefix('about')->name('about.')->group(function() {
             Route::GET('/', 'index')->name('index');
-            Route::GET('/{website}', 'show')->name('show');
             Route::GET('/create', 'create')->name('create');
             Route::POST('/store', 'store')->name('store');
+            Route::GET('/{website}', 'show')->name('show');
             Route::get('/{website}/edit', 'edit')->name('edit');
             Route::PUT('/{website}', 'update')->name('update');
             Route::DELETE('/{website} ', 'destroy')->name('deleted');
@@ -52,9 +52,9 @@ Route::middleware(['auth'])->group(function () {
 
         Route::controller(App\Http\Controllers\Admin\VisiController::class)->prefix('visi')->name('visi.')->group(function() {
             Route::GET('/', 'index')->name('index');
-            Route::GET('/{website}', 'show')->name('show');
             Route::GET('/create', 'create')->name('create');
             Route::POST('/store', 'store')->name('store');
+            Route::GET('/{website}', 'show')->name('show');
             Route::get('/{website}/edit', 'edit')->name('edit');
             Route::PUT('/{website}', 'update')->name('update');
             Route::DELETE('/{website} ', 'destroy')->name('deleted');
@@ -62,9 +62,9 @@ Route::middleware(['auth'])->group(function () {
 
         Route::controller(App\Http\Controllers\Admin\MisiController::class)->prefix('misi')->name('misi.')->group(function() {
             Route::GET('/', 'index')->name('index');
-            Route::GET('/{website}', 'show')->name('show');
             Route::GET('/create', 'create')->name('create');
             Route::POST('/store', 'store')->name('store');
+            Route::GET('/{website}', 'show')->name('show');
             Route::get('/{website}/edit', 'edit')->name('edit');
             Route::PUT('/{website}', 'update')->name('update');
             Route::DELETE('/{website} ', 'destroy')->name('deleted');
@@ -72,9 +72,9 @@ Route::middleware(['auth'])->group(function () {
 
         Route::controller(App\Http\Controllers\Admin\StrukturalController::class)->prefix('struktural')->name('struktural.')->group(function() {
             Route::GET('/', 'index')->name('index');
-            Route::GET('/{website}', 'show')->name('show');
             Route::GET('/create', 'create')->name('create');
             Route::POST('/store', 'store')->name('store');
+            Route::GET('/{website}', 'show')->name('show');
             Route::get('/{website}/edit', 'edit')->name('edit');
             Route::PUT('/{website}', 'update')->name('update');
             Route::DELETE('/{website} ', 'destroy')->name('deleted');
@@ -82,9 +82,9 @@ Route::middleware(['auth'])->group(function () {
 
         Route::controller(App\Http\Controllers\Admin\OpdController::class)->prefix('opd')->name('opd.')->group(function() {
             Route::GET('/', 'index')->name('index');
-            Route::GET('/{website}', 'show')->name('show');
             Route::GET('/create', 'create')->name('create');
             Route::POST('/store', 'store')->name('store');
+            Route::GET('/{website}', 'show')->name('show');
             Route::get('/{website}/edit', 'edit')->name('edit');
             Route::PUT('/{website}', 'update')->name('update');
             Route::DELETE('/{website} ', 'destroy')->name('deleted');
@@ -92,9 +92,9 @@ Route::middleware(['auth'])->group(function () {
 
         Route::controller(App\Http\Controllers\Admin\SmartCityController::class)->prefix('smartcity')->name('smartcity.')->group(function() {
             Route::GET('/', 'index')->name('index');
-            Route::GET('/{website}', 'show')->name('show');
             Route::GET('/create', 'create')->name('create');
             Route::POST('/store', 'store')->name('store');
+            Route::GET('/{website}', 'show')->name('show');
             Route::get('/{website}/edit', 'edit')->name('edit');
             Route::PUT('/{website}', 'update')->name('update');
             Route::DELETE('/{website} ', 'destroy')->name('deleted');
@@ -102,9 +102,9 @@ Route::middleware(['auth'])->group(function () {
 
         Route::controller(App\Http\Controllers\Admin\GalleryController::class)->prefix('gallery')->name('gallery.')->group(function() {
             Route::GET('/', 'index')->name('index');
-            Route::GET('/{website}', 'show')->name('show');
             Route::GET('/create', 'create')->name('create');
             Route::POST('/store', 'store')->name('store');
+            Route::GET('/{website}', 'show')->name('show');
             Route::get('/{website}/edit', 'edit')->name('edit');
             Route::PUT('/{website}', 'update')->name('update');
             Route::DELETE('/{website} ', 'destroy')->name('deleted');
@@ -112,9 +112,9 @@ Route::middleware(['auth'])->group(function () {
 
         Route::controller(App\Http\Controllers\Admin\DestinationController::class)->prefix('destination')->name('destination.')->group(function() {
             Route::GET('/', 'index')->name('index');
-            Route::GET('/{website}', 'show')->name('show');
             Route::GET('/create', 'create')->name('create');
             Route::POST('/store', 'store')->name('store');
+            Route::GET('/{website}', 'show')->name('show');
             Route::get('/{website}/edit', 'edit')->name('edit');
             Route::PUT('/{website}', 'update')->name('update');
             Route::DELETE('/{website} ', 'destroy')->name('deleted');
@@ -122,9 +122,9 @@ Route::middleware(['auth'])->group(function () {
 
         Route::controller(App\Http\Controllers\Admin\NewsController::class)->prefix('news')->name('news.')->group(function() {
             Route::GET('/', 'index')->name('index');
-            Route::GET('/{website}', 'show')->name('show');
             Route::GET('/create', 'create')->name('create');
             Route::POST('/store', 'store')->name('store');
+            Route::GET('/{website}', 'show')->name('show');
             Route::get('/{website}/edit', 'edit')->name('edit');
             Route::PUT('/{website}', 'update')->name('update');
             Route::DELETE('/{website} ', 'destroy')->name('deleted');
@@ -132,9 +132,9 @@ Route::middleware(['auth'])->group(function () {
 
         Route::controller(App\Http\Controllers\Admin\CultureController::class)->prefix('culture')->name('culture.')->group(function() {
             Route::GET('/', 'index')->name('index');
-            Route::GET('/{website}', 'show')->name('show');
             Route::GET('/create', 'create')->name('create');
             Route::POST('/store', 'store')->name('store');
+            Route::GET('/{website}', 'show')->name('show');
             Route::get('/{website}/edit', 'edit')->name('edit');
             Route::PUT('/{website}', 'update')->name('update');
             Route::DELETE('/{website} ', 'destroy')->name('deleted');
@@ -142,9 +142,9 @@ Route::middleware(['auth'])->group(function () {
 
         Route::controller(App\Http\Controllers\Admin\EventController::class)->prefix('event')->name('event.')->group(function() {
             Route::GET('/', 'index')->name('index');
-            Route::GET('/{website}', 'show')->name('show');
             Route::GET('/create', 'create')->name('create');
             Route::POST('/store', 'store')->name('store');
+            Route::GET('/{website}', 'show')->name('show');
             Route::get('/{website}/edit', 'edit')->name('edit');
             Route::PUT('/{website}', 'update')->name('update');
             Route::DELETE('/{website} ', 'destroy')->name('deleted');
@@ -152,9 +152,9 @@ Route::middleware(['auth'])->group(function () {
 
         Route::controller(App\Http\Controllers\Admin\ContactController::class)->prefix('contact')->name('contact.')->group(function() {
             Route::GET('/', 'index')->name('index');
-            Route::GET('/{website}', 'show')->name('show');
             Route::GET('/create', 'create')->name('create');
             Route::POST('/store', 'store')->name('store');
+            Route::GET('/{website}', 'show')->name('show');
             Route::get('/{website}/edit', 'edit')->name('edit');
             Route::PUT('/{website}', 'update')->name('update');
             Route::DELETE('/{website} ', 'destroy')->name('deleted');

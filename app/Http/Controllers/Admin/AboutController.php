@@ -14,11 +14,11 @@ class AboutController extends Controller
 {
     function __construct()
     {
-        // $this->middleware('permission:role-R|role-C|role-U|role-D', ['only' => ['index','store']]);
-        $this->middleware('permission:role-R', ['only' => ['index', 'list']]);
-        $this->middleware('permission:role-C', ['only' => ['create', 'store']]);
-        $this->middleware('permission:role-U', ['only' => ['edit', 'update']]);
-        $this->middleware('permission:role-D', ['only' => ['destroy']]);
+        // $this->middleware('permission:about-R|about-C|about-U|about-D', ['only' => ['index','store']]);
+        $this->middleware('permission:about-R', ['only' => ['index', 'list']]);
+        $this->middleware('permission:about-C', ['only' => ['create', 'store']]);
+        $this->middleware('permission:about-U', ['only' => ['edit', 'update']]);
+        $this->middleware('permission:about-D', ['only' => ['destroy']]);
     }
 
     /**

@@ -126,7 +126,7 @@ class NewsSeeder extends Seeder
         ]);
         News::create([
             'name' => 'Upacara Peringatan Ulang Tahun ke - 77 Republik Indonesia',
-            'thumbnail' => '5.jpg',
+            'thumbnail' => 'pengumuman.jpg',
             'category' => 'Event',
             'body' => '<b>MIMIKA</b> - Lapangan Upacara Kantor Pusat Pemerintahan SP 3
             <br><br><br>

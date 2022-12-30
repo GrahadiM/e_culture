@@ -40,17 +40,22 @@
                         <tr>
                             <td>Hari ini</td>
                             <td align="center" width="20">:</td>
-                            <td>300</td>
+                            <td>{{ \Setting::getCountDate()->count }}</td>
                         </tr>
                         <tr>
                             <td>Bulan ini</td>
                             <td align="center" width="20">:</td>
-                            <td>3200</td>
+                            <td>{{ \Setting::getCountMonth() }}</td>
                         </tr>
                         <tr>
                             <td>Tahun ini</td>
                             <td align="center" width="20">:</td>
-                            <td>134300</td>
+                            <td>{{ \Setting::getCountYear() }}</td>
+                        </tr>
+                        <tr>
+                            <td>Keseluruhan</td>
+                            <td align="center" width="20">:</td>
+                            <td>{{ \Setting::getCountAll() }}</td>
                         </tr>
                     </tbody>
                 </table>
