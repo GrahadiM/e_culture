@@ -30,8 +30,8 @@ class FrontendController extends Controller
     public function about() {
         $data['about'] = About::latest('id')->first();
         $data['visi'] = Visi::latest('id')->first();
-        $data['misi'] = Misi::all();
-        $data['opd'] = Opd::all();
+        $data['misi'] = Misi::latest('id')->first();
+        $data['opd'] = Opd::latest('id')->first();
         $data['bupati'] = Structural::first();
         $data['wakil_bupati'] = Structural::latest('id')->first();
         return view('fe.about', $data);

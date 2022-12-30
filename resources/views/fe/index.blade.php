@@ -13,12 +13,12 @@
                 <div class="section-header-title">
                     <h3 class="title">GREAT <br> ART <br>OF <br>MIMIKA</h3>
                     <p>Telusuri Keindahan Mimika Yang <br> Belum Pernah Anda Temui Sebelumnya</p>
-                    <a href="" class="btn btn-round btn-orange">See Our Vacation</a>
+                    <a href="{{ route('fe.destination') }}" class="btn btn-round btn-orange">See Our Destination</a>
                 </div>
                 <div class="section-header-title-xs">
                     <h3 class="title">GREAT ART OF MIMIKA</h3>
                     <p>Telusuri Keindahan Mimika Yang <br> Belum Pernah Anda Temui Sebelumnya</p>
-                    <a href="" class="btn btn-round btn-orange">See Our Vacation</a>
+                    <a href="{{ route('fe.destination') }}" class="btn btn-round btn-orange">See Our Destination</a>
                 </div>
             </div>
         </div>
@@ -202,7 +202,7 @@
                 @endforeach
             </div>
             <div class="row">
-                @foreach ($item2 as $item)
+                @forelse ($item2 as $item)
                     <div class="col-2 slides slideanim">
                         <img src="{{ asset('fe') }}/img/post/{{ $item->thumbnail }}">
                         <div class="overlay">
@@ -216,8 +216,9 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
-                @foreach ($item3 as $item)
+                @empty
+                @endforelse
+                @forelse ($item3 as $item)
                 <div class="col-2 slides slideanim">
                     <img src="{{ asset('fe') }}/img/post/{{ $item->thumbnail }}">
                     <div class="overlay">
@@ -231,7 +232,8 @@
                         </div>
                     </div>
                 </div>
-                @endforeach
+                @empty
+                @endforelse
             </div>
         </div>
     </section>

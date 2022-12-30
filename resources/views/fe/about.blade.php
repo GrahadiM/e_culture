@@ -19,9 +19,7 @@
                     <span class="ion-ios-bookmarks"></span>&nbsp; Kepala Daerah - Masa Jabatan Masa Periode 2019-2024
                 </div>
                 <div class="panel-body">
-                    <ul>
-                        <p><b><u>Bupati</u></b> : {{ $bupati->name }} <br> <b><u>Wakil Bupati</u></b> : {{ $wakil_bupati->name }}</p>
-                    </ul>
+                    <p><b><u>Bupati</u></b> : {!! $bupati->name !!} <br> <b><u>Wakil Bupati</u></b> : {!! $wakil_bupati->name !!}</p>
                 </div>
             </div>
             <div class="panel" id="visi">
@@ -29,7 +27,7 @@
                     <span class="ion-ios-bookmarks"></span>&nbsp; Visi
                 </div>
                 <div class="panel-body">
-                    <p>{{ $visi->body }}</p>
+                    <p>{!! $visi->body !!}</p>
                 </div>
             </div>
             <div class="panel" id="misi">
@@ -37,11 +35,7 @@
                     <span class="ion-ios-bookmarks"></span>&nbsp; Misi
                 </div>
                 <div class="panel-body">
-                    <ul>
-                        @foreach ($misi as $item)
-                            <li>{{ $item->body }}</li>
-                        @endforeach
-                    </ul>
+                    <p>{!! $misi->body !!}</p>
                 </div>
             </div>
             <div class="panel" id="opd">
@@ -49,11 +43,7 @@
                     <span class="ion-ios-bookmarks"></span>&nbsp; Organisasi Perangkat Daerah (OPD) / Badan / Dinas
                 </div>
                 <div class="panel-body">
-                    <ol>
-                        @foreach ($opd as $item)
-                            <li>{{ $item->name }}</li>
-                        @endforeach
-                    </ol>
+                    {!! $opd->name !!}
                 </div>
             </div>
             <div class="panel" id="deskripsi">

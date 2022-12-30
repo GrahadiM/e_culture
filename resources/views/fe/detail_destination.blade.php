@@ -6,7 +6,7 @@
     <!-- Section -->
     <section class="section-ticket">
         <div class="header">
-            <img src="{{ asset('fe') }}/img/destination/{{ $item->thumbnail }}">
+            <img src="{{ asset('fe') }}/img/post/{{ $item->thumbnail }}">
             <div class="overlay">
                 <div class="desc">
                     <h3>{{ $item->name }}</h3>

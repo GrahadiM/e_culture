@@ -32,10 +32,12 @@ class AboutSeeder extends Seeder
 
         // Misi
         $misi = [
-            'Menciptakan Mimika yang Aman, Tertib dan Damai.',
-            'Mewujudkan Pemerataan Pembangunan Pelayanan Dasar, Ekonomi dan Infrastruktur di Wilayah Pedalaman dan Pesisir.',
-            'Mewujudkan Pemerintahan yang Dinamis, Bersih, Berwibawa, Akuntabel, Profesional dan Inovatif.',
-            'Membangun Sentra-Sentra Ekonomi Baru di Wilayah Mimika.',
+            '<ul>
+                <li>Menciptakan Mimika yang Aman, Tertib dan Damai.</li>
+                <li>Mewujudkan Pemerataan Pembangunan Pelayanan Dasar, Ekonomi dan Infrastruktur di Wilayah Pedalaman dan Pesisir.</li>
+                <li>Mewujudkan Pemerintahan yang Dinamis, Bersih, Berwibawa, Akuntabel, Profesional dan Inovatif.</li>
+                <li>Membangun Sentra-Sentra Ekonomi Baru di Wilayah Mimika.</li>
+            </ul>',
         ];
 
         foreach ($misi as $item) {
@@ -107,47 +109,49 @@ class AboutSeeder extends Seeder
 
         // ORGANISASI PERANGKAT DAERAH (OPD)
         $items = [
-            'Badan Kepegawaian dan Pengembangan Sumber Daya Manusia',
-            'Badan Kesatuan Bangsa dan Politik',
-            'Badan Penanggulangan Bencana Daerah',
-            'Badan Pendapatan Daerah',
-            'Badan Pengelolaan Keuangan dan Aset Daerah',
-            'Badan Perencanaan Pembangunan Daerah',
-            'Bagian Administrasi Perekonomian Dan Pembangunan',
-            'Bagian Administrasi Sumber Daya Manusia',
-            'Bagian Hukum',
-            'Bagian Humas dan Protokoler',
-            'Bagian Kesejahteraan Rakyat',
-            'Bagian Layanan Pengadaan Barang dan Jasa',
-            'Bagian Organisasi',
-            'Bagian Tata Pemerintahan',
-            'Bagian Umum dan Perlengkapan',
-            'Dinas Kependudukan dan Pencatatan Sipil',
-            'Dinas Kesehatan',
-            'Dinas Ketahanan Pangan',
-            'Dinas Komunikasi dan Informatika',
-            'Dinas Koperasi da Usaha Kecil Menengah',
-            'Dinas Lingkungan Hidup',
-            'Dinas Pariwisata, Kebudayaan, Pemuda dan Olahraga',
-            'Dinas Pekerjaan Umum dan Penataan Ruang',
-            'Dinas Pemberdayaan Masyarakat dan Kampung',
-            'Dinas Pemberdayaan Perempuan dan Perlindungan Anak, Pengendalian Penduduk dan Keluarga Berencana',
-            'Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu',
-            'Dinas Pendidikan',
-            'Dinas Perhubungan',
-            'Dinas Perikanan',
-            'Dinas Perindustrian dan Perdagangan',
-            'Dinas Perpustakaan dan Arsip Daerah',
-            'Dinas Perumahan, Kawasan Pemukiman dan Pertanahan',
-            'Dinas Peternakan dan Kesehatan Hewan',
-            'Dinas Satuan Polisi Pamong Praja',
-            'Dinas Sosial',
-            'Dinas Tanaman Pangan, Hortikultura dan Perkebunan',
-            'Dinas Tenaga Kerja dan Transmigrasi',
-            'INSPEKTORAT',
-            'RSUD Kabupaten Mimika',
-            'Sekretariat Daerah',
-            'Sekretariat DPRD',
+            '<ul>
+                <li>Badan Kepegawaian dan Pengembangan Sumber Daya Manusia</li>
+                <li>Badan Kesatuan Bangsa dan Politik</li>
+                <li>Badan Penanggulangan Bencana Daerah</li>
+                <li>Badan Pendapatan Daerah</li>
+                <li>Badan Pengelolaan Keuangan dan Aset Daerah</li>
+                <li>Badan Perencanaan Pembangunan Daerah</li>
+                <li>Bagian Administrasi Perekonomian Dan Pembangunan</li>
+                <li>Bagian Administrasi Sumber Daya Manusia</li>
+                <li>Bagian Hukum</li>
+                <li>Bagian Humas dan Protokoler</li>
+                <li>Bagian Kesejahteraan Rakyat</li>
+                <li>Bagian Layanan Pengadaan Barang dan Jasa</li>
+                <li>Bagian Organisasi</li>
+                <li>Bagian Tata Pemerintahan</li>
+                <li>Bagian Umum dan Perlengkapan</li>
+                <li>Dinas Kependudukan dan Pencatatan Sipil</li>
+                <li>Dinas Kesehatan</li>
+                <li>Dinas Ketahanan Pangan</li>
+                <li>Dinas Komunikasi dan Informatika</li>
+                <li>Dinas Koperasi da Usaha Kecil Menengah</li>
+                <li>Dinas Lingkungan Hidup</li>
+                <li>Dinas Pariwisata, Kebudayaan, Pemuda dan Olahraga</li>
+                <li>Dinas Pekerjaan Umum dan Penataan Ruang</li>
+                <li>Dinas Pemberdayaan Masyarakat dan Kampung</li>
+                <li>Dinas Pemberdayaan Perempuan dan Perlindungan Anak, Pengendalian Penduduk dan Keluarga Berencana</li>
+                <li>Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu</li>
+                <li>Dinas Pendidikan</li>
+                <li>Dinas Perhubungan</li>
+                <li>Dinas Perikanan</li>
+                <li>Dinas Perindustrian dan Perdagangan</li>
+                <li>Dinas Perpustakaan dan Arsip Daerah</li>
+                <li>Dinas Perumahan, Kawasan Pemukiman dan Pertanahan</li>
+                <li>Dinas Peternakan dan Kesehatan Hewan</li>
+                <li>Dinas Satuan Polisi Pamong Praja</li>
+                <li>Dinas Sosial</li>
+                <li>Dinas Tanaman Pangan, Hortikultura dan Perkebunan</li>
+                <li>Dinas Tenaga Kerja dan Transmigrasi</li>
+                <li>INSPEKTORAT</li>
+                <li>RSUD Kabupaten Mimika</li>
+                <li>Sekretariat Daerah</li>
+                <li>Sekretariat DPRD</li>
+            </ul>',
         ];
 
         foreach ($items as $item) {

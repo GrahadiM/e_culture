@@ -40,10 +40,50 @@ class PermissionTableSeeder extends Seeder
             'website-R',
             'website-U',
             'website-D',
+            // about
+            'about-C',
+            'about-R',
+            'about-U',
+            'about-D',
+            // smartcity
+            'smartcity-C',
+            'smartcity-R',
+            'smartcity-U',
+            'smartcity-D',
+            // gallery
+            'gallery-C',
+            'gallery-R',
+            'gallery-U',
+            'gallery-D',
+            // destination
+            'destination-C',
+            'destination-R',
+            'destination-U',
+            'destination-D',
+            // news
+            'news-C',
+            'news-R',
+            'news-U',
+            'news-D',
+            // culture
+            'culture-C',
+            'culture-R',
+            'culture-U',
+            'culture-D',
+            // event
+            'event-C',
+            'event-R',
+            'event-U',
+            'event-D',
+            // contact
+            'contact-C',
+            'contact-R',
+            'contact-U',
+            'contact-D',
         ];
 
         foreach ($permissions as $permission) {
             Permission::create(['name' => $permission]);
-       }
+        }
     }
 }

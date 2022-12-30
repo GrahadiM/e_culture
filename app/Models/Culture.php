@@ -9,7 +9,7 @@ class Culture extends Model
 {
     use HasFactory;
 
-    protected $table = 'cultures';
+    protected $table = 'culture';
     protected $primarykey = 'id';
     protected $guarded = [];
 }

@@ -7,8 +7,8 @@ return [
     ],
 
     'userManagement' => [
-        'title'          => 'Akses',
-        'title_singular' => 'Akses',
+        'title'          => 'Menu Akses',
+        'title_singular' => 'Menu Akses',
     ],
     'permission'     => [
         'title'          => 'Permissions',

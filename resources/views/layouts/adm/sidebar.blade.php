@@ -22,21 +22,79 @@
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent nav-flat nav-legacy" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
-                        @can('role-R')
+                        @can('dashboard-R')
                         <li class="nav-item">
                             <a href="{{ route('home') }}" class="nav-link {{ Request::routeIs('dashboard') ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-home"></i>
+                                <p>{{ trans('menu.dashboard.title') }}</p>
+                            </a>
+                        </li>
+                        @endcan
+                        @canany(['destination-R', 'news-R', 'culture-R', 'event-R'])
+                        <li class="nav-item {{ Request::routeIs('admin.destination*') || Request::routeIs('admin.news*') || Request::routeIs('admin.culture*') || Request::routeIs('admin.event*') ? 'menu-open' : '' }}">
+                            <a href="#" class="nav-link {{ Request::routeIs('admin.destination*') || Request::routeIs('admin.news*') || Request::routeIs('admin.culture*') || Request::routeIs('admin.event*') ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-clipboard-list"></i>
                                 <p>
-                                    {{ trans('menu.dashboard.title') }}
-                                    {{-- <span class="right badge badge-danger">New</span> --}}
+                                    Menu Post
+                                    <i class="right fas fa-angle-left"></i>
                                 </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                @can('destination-R')
+                                <li class="nav-item">
+                                    <a href="{{ route('admin.destination.index') }}" class="nav-link {{ Request::routeIs('admin.destination*') ? 'active' : '' }}">
+                                        <i class="fas fa-angle-right nav-icon"></i>
+                                        <p>Wisata</p>
+                                    </a>
+                                </li>
+                                @endcan
+                                @can('news-R')
+                                <li class="nav-item">
+                                    <a href="{{ route('admin.news.index') }}" class="nav-link {{ Request::routeIs('admin.news*') ? 'active' : '' }}">
+                                        <i class="fas fa-angle-right nav-icon"></i>
+                                        <p>Berita</p>
+                                    </a>
+                                </li>
+                                @endcan
+                                @can('culture-R')
+                                <li class="nav-item">
+                                    <a href="{{ route('admin.culture.index') }}" class="nav-link {{ Request::routeIs('admin.culture*') ? 'active' : '' }}">
+                                        <i class="fas fa-angle-right nav-icon"></i>
+                                        <p>Budaya</p>
+                                    </a>
+                                </li>
+                                @endcan
+                                @can('event-R')
+                                <li class="nav-item">
+                                    <a href="{{ route('admin.event.index') }}" class="nav-link {{ Request::routeIs('admin.event*') ? 'active' : '' }}">
+                                        <i class="fas fa-angle-right nav-icon"></i>
+                                        <p>Acara</p>
+                                    </a>
+                                </li>
+                                @endcan
+                            </ul>
+                        </li>
+                        @endcan
+                        @can('about-R')
+                        <li class="nav-item">
+                            <a href="{{ route('admin.about.index') }}" class="nav-link {{ Request::routeIs('about') ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-clipboard-list"></i>
+                                <p>Menu Tentang</p>
+                            </a>
+                        </li>
+                        @endcan
+                        @can('contact-R')
+                        <li class="nav-item">
+                            <a href="{{ route('admin.contact.index') }}" class="nav-link {{ Request::routeIs('contact') ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-comments"></i>
+                                <p>Menu Pesan</p>
                             </a>
                         </li>
                         @endcan
                         @canany(['role-R', 'permission-R', 'user-R'])
                         <li class="nav-item {{ Request::routeIs('roles*') || Request::routeIs('permissions*') || Request::routeIs('users*') ? 'menu-open' : '' }}">
                             <a href="#" class="nav-link {{ Request::routeIs('roles*') || Request::routeIs('permissions*') || Request::routeIs('users*') ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-shield-alt"></i>
+                                <i class="nav-icon fas fa-users-cog"></i>
                                 <p>
                                     {{ trans('menu.userManagement.title') }}
                                     <i class="right fas fa-angle-left"></i>
@@ -70,6 +128,7 @@
                             </ul>
                         </li>
                         @endcan
+                        {{-- @can('website-R')
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-shield-alt"></i>
@@ -99,6 +158,7 @@
                                 </li>
                             </ul>
                         </li>
+                        @endcan --}}
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->

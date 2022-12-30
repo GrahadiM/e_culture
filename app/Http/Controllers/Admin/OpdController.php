@@ -2,21 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Contact;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Opd;
+use Illuminate\Http\Request;
 
-class ContactController extends Controller
+class OpdController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-        $this->middleware('permission:contact-C', ['only' => ['index','list','show']]);
-        $this->middleware('permission:contact-R', ['only' => ['create','store']]);
-        $this->middleware('permission:contact-U', ['only' => ['edit','update']]);
-        $this->middleware('permission:contact-D', ['only' => ['destroy']]);
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -24,9 +15,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        $data['title'] = 'Message';
-        $data['message'] = Contact::latest('id')->get();
-        return view('adm.message.index', $data);
+        //
     }
 
     /**
@@ -81,7 +70,14 @@ class ContactController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+        ]);
+
+        $data['name'] = $request->name;
+        Opd::find($id)->update($data);
+
+        return back()->with('success','Data Berhasil Tersimpan');
     }
 
     /**

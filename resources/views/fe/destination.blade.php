@@ -32,7 +32,7 @@
 		<div class="single-body">
             @foreach ($items as $item)
                 <div class="col">
-                    <img src="{{ asset('fe') }}/img/destination/{{ $item->thumbnail }}">
+                    <img src="{{ asset('fe') }}/img/post/{{ $item->thumbnail }}">
                     <div class="overlay">
                         <div class="caption">
                             <div class="caption-text">
