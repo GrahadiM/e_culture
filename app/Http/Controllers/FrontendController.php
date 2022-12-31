@@ -10,10 +10,10 @@ use App\Models\About;
 use App\Models\Event;
 use App\Models\Contact;
 use App\Models\Culture;
-use App\Models\ViewPage;
 use App\Models\SmartCity;
 use App\Models\Structural;
 use App\Models\Destination;
+use App\Models\Gallery;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -41,7 +41,8 @@ class FrontendController extends Controller
 
     // Galeri
     public function gallery() {
-        return view('fe.gallery');
+        $data['items'] = Gallery::latest('id')->get();
+        return view('fe.gallery', $data);
     }
 
     // Berita

@@ -2,6 +2,7 @@
 
 namespace App\Helper;
 
+use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 
 class SettingHelper
@@ -16,14 +17,24 @@ class SettingHelper
     {
         $count = \App\Models\ViewPage::where([
 			['tanggal', date('Y-m-d')],
-		])->first();
+		])->latest('id')->first();
         return $count;
     }
 
     public static function getCountMonth()
     {
         $count = \App\Models\ViewPage::all()->sum('count');
-        // dd($count->sum('count'));
+        // $count = \App\Models\ViewPage::where('tanggal', Carbon::getWeekendDays())->get();
+        // $count = \App\Models\ViewPage::select(
+        //         DB::raw('sum(count) as `sums`'),
+        //         DB::raw("DATE_FORMAT(created_at,'%M %Y') as months"),
+        //         DB::raw('max(created_at) as createdAt')
+        //     )
+        //    ->where("created_at", ">", \Carbon\Carbon::now()->subMonths(6))
+        //    ->orderBy('createdAt', 'desc')
+        //    ->groupBy('months')
+        //    ->get();
+        // dd($count);
         return $count;
     }
 

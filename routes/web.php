@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('fe.index');
 // });
 
-Route::middleware(['visitor'])->controller(App\Http\Controllers\FrontendController::class)->prefix('')->name('fe.')->group(function() {
+Route::middleware('visitor')->controller(App\Http\Controllers\FrontendController::class)->prefix('')->name('fe.')->group(function() {
     Route::get('/', 'index')->name('index');
     Route::get('/about', 'about')->name('about');
     Route::get('/gallery', 'gallery')->name('gallery');

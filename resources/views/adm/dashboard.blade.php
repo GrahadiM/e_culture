@@ -52,6 +52,8 @@
                 <a href="{{ route('admin.destination.index') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
+
+        @can('contact-R')
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
@@ -105,6 +107,7 @@
             <!-- /.card -->
         </div>
         <!-- /.col -->
+        @endcan
     </div>
 
 @endsection

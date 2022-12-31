@@ -18,8 +18,8 @@ class CountVisitor
     public function handle(Request $request, Closure $next)
     {
         $atr = ViewPage::where([
-			['tanggal', date('Y-m-d')],
-		])->first();
+			['tanggal', '=', date('Y-m-d')],
+		])->latest('id')->first();
 
 		$count = $request->count == null ? 1 : $request->count;
 		$new = false;
