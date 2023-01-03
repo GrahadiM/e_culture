@@ -17,24 +17,26 @@ class CountVisitor
      */
     public function handle(Request $request, Closure $next)
     {
-        $atr = ViewPage::where([
-			['tanggal', '=', date('Y-m-d')],
+        $data = \App\Models\ViewPage::where([
+			['tanggal', date('Y-m-d')],
+			// ['tanggal', Carbon::now()],
 		])->latest('id')->first();
 
-		$count = $request->count == null ? 1 : $request->count;
+		// $count = $request->count == NULL ? 1 : $request->count;
+		$count = 1;
 		$new = false;
 
-		if (!$atr) {
-			$atr = new ViewPage();
+		if (!$data) {
+			$data = new ViewPage();
 			$new = true;
 		}
 
         if ($new) {
-            $atr->count = $count;
+            $data->count = $count;
         } else {
-            $atr->count = $atr->count + $count;
+            $data->count = $data->count + $count;
         }
-        $atr->save();
+        $data->save();
 
         return $next($request);
     }

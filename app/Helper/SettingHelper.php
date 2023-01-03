@@ -15,9 +15,11 @@ class SettingHelper
 
     public static function getCountDate()
     {
-        $count = \App\Models\ViewPage::where([
+        $data = \App\Models\ViewPage::where([
 			['tanggal', date('Y-m-d')],
+			// ['tanggal', Carbon::now()],
 		])->latest('id')->first();
+        $count = $data == NULL ? $data = 0 : $data->count;
         return $count;
     }
 

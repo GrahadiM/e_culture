@@ -40,7 +40,7 @@
                         <tr>
                             <td>Hari ini</td>
                             <td align="center" width="20">:</td>
-                            <td>{{ \Setting::getCountDate()->count }}</td>
+                            <td>{{ \Setting::getCountDate() }}</td>
                         </tr>
                         <tr>
                             <td>Bulan ini</td>
