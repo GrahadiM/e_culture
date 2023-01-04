@@ -17,7 +17,7 @@
 
     <ul class="breadcrumb">
         <li><a href="{{ route('fe.index') }}">Home</a></li>
-        <li>News</li>
+        <li>{{ $item->category }}</li>
     </ul>
 
     <section class="section section-archive">
@@ -41,16 +41,14 @@
                         <div class="content-single-footer">
                             <h3 class="text-center">Artikel Terkait</h3>
                             <div class="terkait">
-                                @foreach ($items as $item)
-                                    <div class="col">
-                                        <img src="{{ asset('fe') }}/img/post/{{ $item->thumbnail }}"> <br><br>
-                                        <a href="#">
-                                            <h3 class="text-center">
-                                                {{ $item->name }}
-                                            </h3>
-                                        </a>
-                                    </div>
-                                @endforeach
+                                <div class="col">
+                                    <img src="{{ asset('fe') }}/img/post/{{ $item->thumbnail }}"> <br><br>
+                                    <a href="#">
+                                        <h3 class="text-center">
+                                            {{ $item->name }}
+                                        </h3>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

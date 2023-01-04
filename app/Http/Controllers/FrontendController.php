@@ -75,7 +75,7 @@ class FrontendController extends Controller
     }
 
     public function detail_culture($id) {
-        $data['item'] = Culture::find($id);
+        $data['item'] = News::find($id);
         return view('fe.detail_news', $data);
     }
 
@@ -86,7 +86,7 @@ class FrontendController extends Controller
     }
 
     public function detail_event($id) {
-        $data['item'] = Event::find($id);
+        $data['item'] = News::find($id);
         return view('fe.detail_news', $data);
     }
 
