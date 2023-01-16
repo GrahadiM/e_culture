@@ -6,7 +6,7 @@
     <!-- Section Header -->
     <section class="section-header">
         <div class="section-header-image">
-            <img src="{{ asset('fe') }}/img/header.jpg" alt="Header">
+            <img src="{{ asset('fe') }}/img/banner-2.png" alt="Header">
         </div>
         <div class="container">
             <div class="section-header-inner">
